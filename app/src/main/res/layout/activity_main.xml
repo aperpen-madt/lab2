@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:focusableInTouchMode="true">
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/empty_horizontal_divider"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:showDividers="middle"
+            tools:layout_editor_absoluteX="92dp"
+            tools:layout_editor_absoluteY="142dp">
+
+            <TextView
+                android:id="@+id/labelFormText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/form_label_text"
+                android:labelFor="@id/inputText"/>
+
+            <EditText
+                android:id="@+id/inputText"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:autofillHints="no"
+                android:ems="10"
+                android:inputType="text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/verticalSeparation"
+            android:divider="@drawable/empty_horizontal_divider"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:showDividers="middle"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            tools:layout_editor_absoluteX="-76dp">
+
+            <TextView
+                android:id="@+id/labelFormElement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/form_label_wtc" />
+
+
+            <Spinner
+                android:id="@+id/spinnerWtc"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:entries="@array/form_wtc_options" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/verticalSeparation"
+            android:text="@string/form_button_count" />
+
+
+            <TextView
+                android:id="@+id/labelResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/verticalSeparation"
+                android:text="@string/label_result"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="24sp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
